@@ -1,0 +1,23 @@
+[package]
+name = "bevy_cpal"
+version = "0.1.0"
+edition = "2021"
+description = "A cpal audio backend for Bevy Engine"
+homepage = "https://bevyengine.org"
+repository = "https://github.com/bevyengine/bevy"
+license = "MIT OR Apache-2.0"
+keywords = ["bevy"]
+
+[features]
+shared-stdcxx = ["cpal/oboe-shared-stdcxx"]
+
+[dependencies]
+bevy_app = { path = "../bevy_app", version = "0.14.0-dev" }
+bevy_ecs = { path = "../bevy_ecs", version = "0.14.0-dev" }
+bevy_audio = { path = "../bevy_audio", version = "0.14.0-dev" }
+bevy_utils = { path = "../bevy_utils", version = "0.14.0-dev" }
+cpal = { version = "0.15" }
+ringbuf = "0.4.1"
+
+[lints]
+workspace = true
